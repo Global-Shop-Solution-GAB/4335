@@ -1,0 +1,972 @@
+Program.Sub.ScreenSU.Start
+Gui.SS_Form1..create
+Gui.SS_Form1..caption("User Alert Maintenance")
+Gui.SS_Form1..size(6270,9270)
+Gui.SS_Form1..minx(0)
+Gui.SS_Form1..miny(0)
+Gui.SS_Form1..position(0,0)
+Gui.SS_Form1..event(UnLoad,ss_form1_unload)
+Gui.SS_Form1..alwaysontop(False)
+Gui.SS_Form1..fontname("Arial")
+Gui.SS_Form1..fontsize(8)
+Gui.SS_Form1..forecolor(0)
+Gui.SS_Form1..BackColor(-2147483633)
+Gui.SS_Form1..controlbox(True)
+Gui.SS_Form1..maxbutton(False)
+Gui.SS_Form1..minbutton(False)
+Gui.SS_Form1..mousepointer(0)
+Gui.SS_Form1..moveable(True)
+Gui.SS_Form1..sizeable(False)
+Gui.SS_Form1..ShowInTaskBar(True)
+Gui.SS_Form1..titlebar(True)
+Gui.SS_Form1.lbl_txtPart.create(label,"Part",True,1800,200,1,100,135,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl_txtPart.defaultvalue("")
+Gui.SS_Form1.lbl_txtPart.controlgroup(0)
+Gui.SS_Form1.txtPart.create(textbox,"",True,2250,330,0,100,335,True,0,Arial,8,16777215,1)
+Gui.SS_Form1.txtPart.event(Change,txtpart_change)
+Gui.SS_Form1.txtPart.maxLength(17)
+Gui.SS_Form1.txtPart.defaultvalue("")
+Gui.SS_Form1.txtPart.controlgroup(0)
+Gui.SS_Form1.txtPart.tabstop(True)
+Gui.SS_Form1.txtPart.tabindex(1)
+Gui.SS_Form1.lbl_txtRev.create(label,"Rev",True,465,200,1,2435,135,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl_txtRev.defaultvalue("")
+Gui.SS_Form1.lbl_txtRev.controlgroup(0)
+Gui.SS_Form1.txtRev.create(textbox,"",True,450,330,0,2435,335,True,0,Arial,8,16777215,1)
+Gui.SS_Form1.txtRev.event(Change,txtrev_change)
+Gui.SS_Form1.txtRev.maxLength(3)
+Gui.SS_Form1.txtRev.defaultvalue("")
+Gui.SS_Form1.txtRev.controlgroup(0)
+Gui.SS_Form1.txtRev.tabstop(True)
+Gui.SS_Form1.txtRev.tabindex(2)
+Gui.SS_Form1.cmdPartBrw.create(button)
+Gui.SS_Form1.cmdPartBrw.caption("^")
+Gui.SS_Form1.cmdPartBrw.visible(True)
+Gui.SS_Form1.cmdPartBrw.size(330,330)
+Gui.SS_Form1.cmdPartBrw.zorder(0)
+Gui.SS_Form1.cmdPartBrw.position(3000,335)
+Gui.SS_Form1.cmdPartBrw.enabled(True)
+Gui.SS_Form1.cmdPartBrw.fontname("Arial")
+Gui.SS_Form1.cmdPartBrw.fontsize(8)
+Gui.SS_Form1.cmdPartBrw.event(Click,cmdpartbrw_click)
+Gui.SS_Form1.cmdPartBrw.defaultvalue("")
+Gui.SS_Form1.cmdPartBrw.controlgroup(0)
+Gui.SS_Form1.lbl_txtWC.create(label,"WC",True,1800,200,1,3580,135,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl_txtWC.defaultvalue("")
+Gui.SS_Form1.lbl_txtWC.controlgroup(0)
+Gui.SS_Form1.txtWC.create(textbox,"",True,750,330,0,3580,335,True,0,Arial,8,16777215,1)
+Gui.SS_Form1.txtWC.event(Change,txtwc_change)
+Gui.SS_Form1.txtWC.maxLength(4)
+Gui.SS_Form1.txtWC.defaultvalue("")
+Gui.SS_Form1.txtWC.controlgroup(0)
+Gui.SS_Form1.cmd_txtWC.create(button)
+Gui.SS_Form1.cmd_txtWC.caption("^")
+Gui.SS_Form1.cmd_txtWC.visible(True)
+Gui.SS_Form1.cmd_txtWC.size(330,330)
+Gui.SS_Form1.cmd_txtWC.zorder(0)
+Gui.SS_Form1.cmd_txtWC.position(4430,335)
+Gui.SS_Form1.cmd_txtWC.enabled(True)
+Gui.SS_Form1.cmd_txtWC.fontname("Arial")
+Gui.SS_Form1.cmd_txtWC.fontsize(8)
+Gui.SS_Form1.cmd_txtWC.event(Click,cmd_txtwc_click)
+Gui.SS_Form1.cmd_txtWC.defaultvalue("")
+Gui.SS_Form1.cmd_txtWC.controlgroup(0)
+Gui.SS_Form1.lbl_txtUser.create(label,"User ID",True,1800,200,1,100,750,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl_txtUser.defaultvalue("")
+Gui.SS_Form1.lbl_txtUser.controlgroup(0)
+Gui.SS_Form1.txtUser.create(textbox,"",True,1800,330,0,100,980,True,0,Arial,8,16777215,1)
+Gui.SS_Form1.txtUser.defaultvalue("")
+Gui.SS_Form1.txtUser.controlgroup(0)
+Gui.SS_Form1.cmd_txtUser.create(button)
+Gui.SS_Form1.cmd_txtUser.caption("^")
+Gui.SS_Form1.cmd_txtUser.visible(True)
+Gui.SS_Form1.cmd_txtUser.size(330,330)
+Gui.SS_Form1.cmd_txtUser.zorder(0)
+Gui.SS_Form1.cmd_txtUser.position(1985,980)
+Gui.SS_Form1.cmd_txtUser.enabled(True)
+Gui.SS_Form1.cmd_txtUser.fontname("Arial")
+Gui.SS_Form1.cmd_txtUser.fontsize(8)
+Gui.SS_Form1.cmd_txtUser.event(Click,cmd_txtuser_click)
+Gui.SS_Form1.cmd_txtUser.defaultvalue("")
+Gui.SS_Form1.cmd_txtUser.controlgroup(0)
+Gui.SS_Form1.cmdAdd.create(button)
+Gui.SS_Form1.cmdAdd.caption("Add")
+Gui.SS_Form1.cmdAdd.visible(True)
+Gui.SS_Form1.cmdAdd.size(1000,360)
+Gui.SS_Form1.cmdAdd.zorder(0)
+Gui.SS_Form1.cmdAdd.position(100,1420)
+Gui.SS_Form1.cmdAdd.enabled(True)
+Gui.SS_Form1.cmdAdd.fontname("Arial")
+Gui.SS_Form1.cmdAdd.fontsize(8)
+Gui.SS_Form1.cmdAdd.event(Click,cmdadd_click)
+Gui.SS_Form1.cmdAdd.defaultvalue("")
+Gui.SS_Form1.cmdAdd.controlgroup(0)
+Gui.SS_Form1.cmdSave.create(button)
+Gui.SS_Form1.cmdSave.caption("Save")
+Gui.SS_Form1.cmdSave.visible(True)
+Gui.SS_Form1.cmdSave.size(1000,360)
+Gui.SS_Form1.cmdSave.zorder(0)
+Gui.SS_Form1.cmdSave.position(100,8175)
+Gui.SS_Form1.cmdSave.enabled(True)
+Gui.SS_Form1.cmdSave.fontname("Arial")
+Gui.SS_Form1.cmdSave.fontsize(8)
+Gui.SS_Form1.cmdSave.event(Click,cmdsave_click)
+Gui.SS_Form1.cmdSave.defaultvalue("")
+Gui.SS_Form1.cmdSave.controlgroup(0)
+Gui.SS_Form1.cmdDelete.create(button)
+Gui.SS_Form1.cmdDelete.caption("Delete")
+Gui.SS_Form1.cmdDelete.visible(True)
+Gui.SS_Form1.cmdDelete.size(1000,360)
+Gui.SS_Form1.cmdDelete.zorder(0)
+Gui.SS_Form1.cmdDelete.position(1185,8175)
+Gui.SS_Form1.cmdDelete.enabled(True)
+Gui.SS_Form1.cmdDelete.fontname("Arial")
+Gui.SS_Form1.cmdDelete.fontsize(8)
+Gui.SS_Form1.cmdDelete.event(Click,cmddelete_click)
+Gui.SS_Form1.cmdDelete.defaultvalue("")
+Gui.SS_Form1.cmdDelete.controlgroup(0)
+Gui.SS_Form1.GsGridControl1.Create(GsGridControl)
+Gui.SS_Form1.GsGridControl1.Size(5715,6015)
+Gui.SS_Form1.GsGridControl1.Position(120,2055)
+Gui.SS_Form1.GsGridControl1.Event(CellValueChanged,GsGridControl1_CellValueChanged)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.UDT.uAlerts.Define("Part",String,Part)
+Variable.UDT.uAlerts.Define("WC",String,Machine)
+Variable.UDT.uAlerts.Define("User_ID",String,User_ID)
+Variable.UDT.uAlerts.Define("IM_Flag",String,IM_Flag)
+Variable.UDT.uAlerts.Define("Email_Flag",String,Email_Flag)
+Variable.uGlobal.uAlerts.Declare("uAlerts")
+Variable.Global.bChanged.Declare(Boolean,False)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'Quote 5491
+'Hellical Solutions
+' Maintenance Program for user setup of email and internal messaging.
+'coded by TRT
+'3/24/14
+
+'Description:
+'Hooks : Custom
+'Hooks: 15935
+'Custom Table name: GCG_3931_Job_Alert
+'This program is the maintenance program as well as the message sending program. ''
+
+'The maintenance side will be fired off of any custom hook value that is greater than 1 mill. It will have a part and wc text box. THe grid will load
+'once they enter in a valid combo of part and wc. They are able to add users using the id and they are also able to turn on internal messaging and even email the user
+'if they choose to do so.
+
+'VERY IMPORTANT THAT THE USERS HAVE AN EMAIL SET UP IF THEY ENABLE ENABLE FOR A USER ID.
+
+'The Message Send is fired when an employee clocks into a job that has that part as a finished good, and they are clocking into that particular workcenter thats tracked
+'when the conditions are met the program will go through grab the job number and emp who is clocking into, then look in our custom table GCG_Job_Alert for that particular
+'part and wc combo. If records are found and they users have been enabled for either internal message or email, the program loops through and sends the internal message first
+'as well as building a recipient sting used later for the queuemessage function.
+
+V.Local.bExists.Declare(Boolean)
+v.Local.ssql.Declare(String)
+
+'open up.
+F.ODBC.Connection!conX.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+F.Intrinsic.Control.If(V.Caller.Hook,=,15935)
+	'being fired from the Job clock in button
+	'call our Send Message sub
+	'assuming its coming from a custom menu item with a custom hook number.
+	F.ODBC.Connection!conX.TableExists("GCG_3931_Job_Alert",V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,False)
+'		F.Intrinsic.UI.Msgbox("GCG_Job_Alert table not found!","Table Missing...",64)
+		F.Intrinsic.Debug.SetLA("GCG_3931_Job_Alert table not found.")
+		F.Intrinsic.Control.CallSub(Ss_form1_unload)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.CallSub(Send_message)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ElseIf(V.Caller.Hook,>=,1000000)
+	'assuming its coming from a custom menu item with a custom hook number.
+	F.ODBC.Connection!conX.TableExists("GCG_3931_Job_Alert",V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,False)
+		F.Intrinsic.UI.Msgbox("GCG_3931_Job_Alert table not found!","Table Missing...",64)
+		F.Intrinsic.Control.CallSub(Ss_form1_unload)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("Select * From GCG_3931_Job_Alert Where Part <> '{0}'","",V.Local.sSQL)
+		f.Data.DataTable.CreateFromSQL("JOBALERT","conx",v.Local.sSQL,TRue)
+		F.Data.DataTable.AddColumn("JOBALERT", "Delete", "Boolean", False)
+		f.Intrinsic.Control.CallSub(loadscreen)
+'		f.Data.DataTable.Close("JOBAL
+		'show our form
+		Gui.SS_Form1..Show
+	F.Intrinsic.Control.EndIf
+f.Intrinsic.Control.ElseIf(v.Caller.Hook,=,15952)
+	'call post job sub routine
+	f.Intrinsic.Control.CallSub(postjob)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+F.Intrinsic.Control.EndIf
+
+Program.Sub.Main.End
+
+Program.Sub.ss_form1_unload.Start
+v.Local.iSaveChanges.Declare(long)
+f.Intrinsic.Control.If(v.Global.bChanged)
+	Function.Intrinsic.UI.MsgBox("Some changes have been made. Do you want to save?", "Save changes", 3, variable.local.iSaveChanges)
+	
+	F.Intrinsic.Control.If(v.Local.iSaveChanges,=,2)
+		'Cancel, don't close
+		f.Intrinsic.Control.ExitSub			
+	F.Intrinsic.Control.elseif(v.Local.iSaveChanges,=,6)
+		'Yes, Save case
+		f.Intrinsic.Control.CallSub(cmdsave_click)
+	F.Intrinsic.Control.endif
+		'No (v.local.iSaveChanges = 7), go ahead and close
+f.Intrinsic.Control.EndIf
+
+'close it
+F.ODBC.Connection!conX.Close
+'end
+F.Intrinsic.Control.End
+
+Program.Sub.ss_form1_unload.End
+
+Program.Sub.cmd_txtuser_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtuser_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+'User Browser for the browser button to bring up all the users
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+
+'using common browser GF.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+
+F.Intrinsic.UI.Browser(10,"",V.Local.sRet)
+F.Intrinsic.Control.If(V.local.sRet,=,"***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.SS_Form1.txtUser.Text(V.Local.sRet(0))
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtuser_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4335_Job_Alert.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_txtuser_click.End
+
+Program.Sub.cmd_txtwc_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtwc_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+'WorkCenter Browser
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+
+'common browser ID for wC 400
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser(400,"",V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,=,"***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.SS_Form1.txtWC.Text(V.Local.sRet(0))
+'	F.Intrinsic.Control.CallSub(Loadgrid,"Mode","W")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtwc_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4335_Job_Alert.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_txtwc_click.End
+
+Program.Sub.cmdadd_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdadd_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.sRev.Declare(String)
+V.Local.sLoc.Declare(String)
+V.Local.sWC.Declare(String)
+V.Local.sUser.Declare(String)
+V.Local.iUB.Declare(Long)
+V.Local.sRet.Declare(String)
+v.Local.irowcount.declare(long)
+v.Local.sFilter.Declare(string)
+
+
+'here is where we will add the rows to our udt, then to our flexgrid
+V.Local.sPart.Set(V.Screen.SS_Form1!txtPart.Text)
+V.Local.sRev.Set(V.Screen.SS_Form1!txtRev.Text)
+V.Local.sWC.Set(V.Screen.SS_Form1!txtWC.Text)
+V.Local.sUser.Set(V.Screen.SS_Form1!txtUser.Text)
+
+'format part string
+F.Intrinsic.String.GSSPartString(V.Local.sPart,V.local.sRev,V.Local.sPart)
+
+F.Intrinsic.Control.If(V.Local.sPart.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Part can not be blank","Missing data...",64)
+	Gui.SS_Form1.txtPart.SetFocus
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.ElseIf(V.Local.sWC.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Workcenter can not be blank","Missing data...",64)
+	Gui.SS_Form1.txtWc.SetFocus
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.ElseIf(V.local.sUser.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("User ID can not be blank","Missing data...",64)
+	Gui.SS_Form1.txtUser.SetFocus
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+
+'Check to see if the part+machine+user_id is already in the grid
+f.Intrinsic.String.Concat("Part = '", v.Local.sPart,"' and Machine = '", v.Local.sWC, "' and User_ID = '", v.Local.sUser,"'", v.Local.sFilter)
+F.Data.DataView.Create("JOBALERT", "Duplicate", 22, v.Local.sFilter, )
+F.Intrinsic.Control.If(v.dataView.JOBALERT!Duplicate.RowCount, >, 0)
+	f.Intrinsic.UI.Msgbox("Record already exists in the grid..")
+	Function.Data.DataView.Close("JobAlert", "Duplicate")
+	f.Intrinsic.Control.exitsub
+f.Intrinsic.Control.endif
+Function.Data.DataView.Close("JobAlert", "Duplicate")
+
+F.Data.DataTable.AddRow("JOBALERT","PART",v.local.sPart.Trim,"Machine",v.Local.sWC.Trim,"User_ID",v.Local.sUser.Trim,"Email_Flag",False,"IM_FLAG",False)
+v.Global.bChanged.Set(True)
+f.Intrinsic.Control.CallSub(loadscreen)
+f.Intrinsic.Control.CallSub(clear_screen)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdadd_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4335_Job_Alert.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdadd_click.End
+
+Program.Sub.cmdsave_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdsave_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+Function.Data.DataTable.SaveToDB("JobAlert", "conx", "GCG_3931_Job_Alert", "Part*!*Machine*!*User_ID",256, "Part@!@Part*!*Machine@!@Machine*!*User_ID@!@User_ID*!*Email_Flag@!@Email_Flag*!*IM_Flag@!@IM_Flag")
+v.Global.bChanged.Set(False)
+f.Intrinsic.UI.Msgbox("Save successful")
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdsave_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4335_Job_Alert.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdsave_click.End
+
+Program.Sub.cmddelete_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmddelete_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+v.Local..BulkDeclareString(sError, sFilter)
+v.Local..BulkDeclareLong(iCount, iRow)
+
+v.Local.sFilter.Set("Delete = 'TRUE'")
+F.Data.DataView.Create("JOBALERT", "Delete", 22, v.Local.sFilter, )
+'Delete the Line
+F.Intrinsic.Control.If(v.dataView.JOBALERT!Delete.RowCount, >, 0)
+	F.Intrinsic.Control.For(v.Local.iCount, v.DataView.JOBALERT!Delete.RowCount--, 0, -1)
+		v.Local.iRow.Set(V.DataView.JobAlert!Delete(v.Local.iCount).DataTableIndex)
+		F.Data.DataTable.DeleteRow("JOBALERT", v.Local.irow)
+	F.Intrinsic.Control.Next(v.Local.iCount)
+	Function.Data.DataTable.SaveToDB("JobAlert", "conx", "GCG_3931_Job_Alert", "Part*!*Machine*!*User_ID",4, "Part@!@Part*!*Machine@!@Machine*!*User_ID@!@User_ID*!*Email_Flag@!@Email_Flag*!*IM_Flag@!@IM_Flag")
+	f.Intrinsic.UI.Msgbox("Delete successful")	
+F.Intrinsic.Control.Else
+	f.Intrinsic.UI.Msgbox("Please select row to delete")
+f.Intrinsic.Control.EndIf
+Function.Data.DataView.Close("JobAlert", "Delete")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmddelete_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4335_Job_Alert.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmddelete_click.End
+
+Program.Sub.gsfgusers_checkclick.Start
+F.Intrinsic.Control.SetErrorHandler("gsfgusers_checkclick_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iRow.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sOrd.Declare(String)
+
+'disable our flexgrid for a sec
+'Gui.SS_Form1.gsfgUsers.Enabled(False)
+'UPDATE OUR UDT FLAG VARIABLES FOR OUR RECORDS
+F.Intrinsic.Control.If(V.Args.Key,>,0)
+	F.Intrinsic.Control.If(V.Args.column,=,1)
+		Gui.SS_Form1.gsfgUsers.ReadRow(V.Args.key,V.Local.sRet)
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		F.Intrinsic.Variable.UDTMultiSeek(V.uGlobal.uAlerts!User_ID,V.Local.sRet(0),V.Local.sOrd)
+		F.Intrinsic.Control.If(V.Local.sOrd,<>,"")
+			F.Intrinsic.String.Split(V.Local.sOrd,"*!*",V.Local.sOrd)
+			F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sOrd.UBound,1)
+				V.uGlobal.uAlerts(v.Local.sOrd(v.Local.iC))!IM_Flag.Set(V.Local.sRet(1).Long)
+			F.Intrinsic.Control.Next(V.Local.iC)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.ElseIf(V.Args.column,=,2)
+		Gui.SS_Form1.gsfgUsers.ReadRow(V.Args.key,V.Local.sRet)
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		F.Intrinsic.Variable.UDTMultiSeek(V.uGlobal.uAlerts!User_ID,V.Local.sRet(0),V.Local.sOrd)
+		F.Intrinsic.Control.If(V.Local.sOrd,<>,"")
+			F.Intrinsic.String.Split(V.Local.sOrd,"*!*",V.Local.sOrd)
+			F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sOrd.UBound,1)
+				V.uglobal.ualerts(v.local.sOrd(v.local.ic))!Email_Flag.Set(V.local.sRet(2).LONG)
+			F.Intrinsic.Control.Next(V.Local.iC)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+'re-anable
+Gui.SS_Form1.gsfgUsers.Enabled(True)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsfgusers_checkclick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4335_Job_Alert.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.gsfgusers_checkclick.End
+
+Program.Sub.LoadGrid.Start
+F.Intrinsic.Control.SetErrorHandler("LoadGrid_Err")
+F.Intrinsic.Control.ClearErrors
+	
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sWC.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.sRev.Declare(String)
+
+f.Intrinsic.Control.If(v.DataTable.JOBALERT.exists,=,True)
+	f.Data.DataTable.Close("JOBALERT")
+f.Intrinsic.Control.EndIf
+
+'This sub will be called from the browser click commands,  only part and wc, since we don't know which one they load first
+'we will pass a flag from each then check the different text box for the other value and attempt
+
+'if arg mode is P we are being summoned from the part browser so check the wc field, or we are coming from the part, rev, or loc text box.
+'else the mode will be W as this is used to say alright we are coming from the workcenter browser or wc txt field.
+
+'F.Intrinsic.Control.If(V.Args.Mode,=,"P")
+'	'we are coming from the part browser so only do this if our wc text box is filled in
+'	V.Local.sWC.Set(V.Screen.SS_Form1!txtWC.Text)
+'	'format our part string
+'	V.Local.sPart.Set(V.Screen.SS_Form1!txtPart.Text)
+'	V.Local.sRev.Set(V.Screen.SS_Form1!txtRev.Text)
+'	f.Intrinsic.Control.If(v.Local.sWC,<>,"")
+'		F.Intrinsic.String.GSSPartString(V.Local.sPart,V.Local.sRev,V.Local.sPart)
+'		F.Intrinsic.String.Build("Select * From GCG_3931_Job_Alert Where Part = '{0}' And Machine = '{1}'",V.Local.sPart.Trim,V.Local.sWC.Trim,V.Local.sSQL)
+'		f.Data.DataTable.CreateFromSQL("JOBALERT","conx",v.Local.sSQL,TRue)
+'		F.Data.DataTable.AddColumn("JOBALERT", "Delete", "Boolean", False)
+'		f.Intrinsic.Control.CallSub(loadscreen)
+'	f.Intrinsic.Control.EndIf
+'F.Intrinsic.Control.Else
+	'we are coming from the workcenter fields so we know we got the field value, hopefully
+'format our part string we have to atleast have a value for part, so do that before we do part/rev combo
+V.Local.sPart.Set(V.Screen.SS_Form1!txtPart.Text)
+'	F.Intrinsic.Control.If(V.Local.sPart.Trim,<>,"")
+V.Local.sRev.Set(V.Screen.SS_Form1!txtRev.Text)
+F.Intrinsic.String.GSSPartString(V.Local.sPart,V.Local.sRev,V.Local.sPart)
+V.Local.sWC.Set(V.Screen.SS_Form1!txtWC.Text)
+f.Intrinsic.Control.If(v.Local.sPart,<>,"")
+	F.Intrinsic.String.Build("Select * From GCG_3931_Job_Alert Where Part = '{0}' And Machine = '{1}'",V.Local.sPart.Trim,V.Local.sWC.Trim,V.Local.sSQL)
+	f.Data.DataTable.CreateFromSQL("JOBALERT","conx",v.Local.sSQL,TRUE)
+	F.Data.DataTable.AddColumn("JOBALERT", "Delete", "Boolean", False)
+	f.Intrinsic.Control.CallSub(loadscreen)
+f.Intrinsic.Control.EndIf
+'F.Intrinsic.Control.Endif
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadGrid_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_Job_Alert_Maint.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.LoadGrid.End
+
+Program.Sub.cmdpartbrw_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdpartbrw_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Part Browser Subroutine.
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+v.Local.bexists.Declare(boolean)
+
+'using common browser
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+
+F.Intrinsic.UI.Browser(100,"",V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,=,"***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.SS_Form1.txtPart.Text(V.Local.sRet(0).Trim)
+	Gui.SS_Form1.txtRev.Text(V.Local.sRet(1).Trim)
+'	F.Intrinsic.Control.CallSub(Loadgrid,"Mode","P")
+F.Intrinsic.Control.endif
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdpartbrw_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4335_Job_Alert.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdpartbrw_click.End
+
+Program.Sub.Clear_Screen.Start
+F.Intrinsic.Control.SetErrorHandler("Clear_Screen_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'sub that will clear out controls and screen information
+Gui.SS_Form1.gsfgUsers.Enabled(False)
+'F.Intrinsic.Control.CallSub(Buildstyle)
+Gui.SS_Form1.gsfgUsers.Enabled(True)
+Gui.SS_Form1.txtPart.Text("")
+Gui.SS_Form1.txtRev.Text("")
+Gui.SS_Form1.txtWC.Text("")
+Gui.SS_Form1.txtUser.Text("")
+Gui.SS_Form1.txtPart.SetFocus
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Clear_Screen_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4335_Job_Alert.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Clear_Screen.End
+
+Program.Sub.gsfgusers_commandclick.Start
+F.Intrinsic.Control.SetErrorHandler("gsfgusers_commandclick_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iRow.Declare(Long)
+V.local.sRet.Declare(String)
+V.Local.sOrd.Declare(String)
+V.Local.iO.Declare(Long)
+V.Local.sSQL.Declare(String)
+
+'F.Intrinsic.Control.If(V.Args.key,>,0)
+'	F.Intrinsic.Control.If(V.Args.column,=,3)
+'		Gui.SS_Form1.gsfgUsers.Enabled(False)
+'		Gui.SS_Form1.gsfgUsers.ReadRow(V.Args.key,V.Local.sRet)
+'		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+'		F.Intrinsic.Variable.UDTMultiSeek(V.uGlobal.uAlerts!User_ID,V.Local.sRet(0),V.Local.sOrd)
+'		F.Intrinsic.Control.If(V.Local.sOrd.Trim,<>,"")
+'			F.Intrinsic.Control.For(V.Local.iO,0,V.Local.sOrd.UBound,1)
+'				F.Intrinsic.String.Build("Delete From GCG_3931_Job_Alert Where Part = '{0}' And Machine = '{1}' And User_ID = '{2}'",V.uGlobal.uAlerts(v.Local.sOrd(v.Local.iO))!Part,V.uGlobal.uAlerts(v.Local.sOrd(v.Local.iO))!WC,V.uGlobal.uAlerts(v.Local.sOrd(v.Local.iO))!User_ID,V.Local.sSQL)
+'				F.ODBC.Connection!conX.Execute(V.Local.sSQL)
+'				F.Intrinsic.Variable.UDTFlagOrdinal(V.uGlobal.uAlerts,True,V.Local.sOrd(v.Local.iO))
+'				F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uAlerts)
+'			F.Intrinsic.Control.Next(V.Local.iO)
+'			'load our udt to flexgrid.
+'			Gui.SS_Form1.gsfgUsers.LoadFromUDT("v.uGlobal.uAlerts","User_ID::0*!*IM_Flag::1*!*Email_Flag::2",2)
+'			Gui.SS_Form1.gsfgUsers.ApplyStyle(0,1)
+'			Gui.SS_Form1.gsfgUsers.Enabled(True)
+'	
+'		F.Intrinsic.Control.EndIf
+'	F.Intrinsic.Control.Endif
+'F.Intrinsic.Control.EndIf
+'
+'
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsfgusers_commandclick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4335_Job_Alert.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.gsfgusers_commandclick.End
+
+Program.Sub.txtpart_change.Start
+F.Intrinsic.Control.SetErrorHandler("txtpart_change_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'F.Intrinsic.Control.CallSub(Loadgrid,"Mode","P")
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtpart_change_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3931_Job_Alert_Maint.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtpart_change.End
+
+Program.Sub.txtrev_change.Start
+F.Intrinsic.Control.SetErrorHandler("txtrev_change_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'F.Intrinsic.Control.CallSub(Loadgrid,"Mode","P")
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtrev_change_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3931_Job_Alert_Maint.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtrev_change.End
+
+Program.Sub.txtwc_change.Start
+F.Intrinsic.Control.SetErrorHandler("txtwc_change_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'F.Intrinsic.Control.CallSub(Loadgrid,"Mode","W")
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtwc_change_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3931_Job_Alert_Maint.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtwc_change.End
+
+Program.Sub.Send_Message.Start
+F.Intrinsic.Control.SetErrorHandler("Send_Message_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sJob.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.sRev.Declare(String)
+V.Local.sEmpName.Declare(String)
+V.Local.sWC.Declare(String)
+V.Local.iUserID.Declare(Long)
+V.Local.sUserName.Declare(String)
+V.Local.sUserNameTemp.Declare(String)
+V.Local.sUserEmail.Declare(String)
+V.Local.sContacts.Declare(String)
+V.Local.sM.Declare(String)
+V.Local.iMessId.Declare(Long)
+V.Local.sSubject.Declare(String)
+V.Local.sBody.Declare(String)
+
+V.Local.sJob.Set(V.Passed.000003)
+V.Local.sEmpName.Set(V.Passed.009994)
+V.Local.sPart.Set(V.Passed.000132)
+V.Local.sRev.Set(V.Passed.000133)
+V.Local.sWC.Set(V.Passed.009004)
+
+F.Intrinsic.String.GSSPartString(V.Local.sPart,V.Local.sRev,V.Local.sPart)
+
+F.Intrinsic.String.Build("Part {0} has been started!!",V.Local.sPart.Trim,V.Local.sSubject)
+F.Intrinsic.String.Build("Employee {0}, has clocked into Workcenter, {3}, on Job #{1} with Part #: {2}",V.Local.sEmpName,V.Local.sJob.Trim,V.Local.sPart.Trim,V.Local.sWC.Trim,V.Local.sBody)
+
+'query our table
+F.Intrinsic.String.Build("Select User_ID, IM_Flag,Email_Flag From GCG_3931_Job_Alert Where Part = '{0}' And Machine = '{1}' And ( Email_Flag = '1' Or IM_Flag = '1')",V.Local.sPart.Trim,V.Local.sWC.Trim,V.Local.sSQL)
+F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+'get our contacts for our emails
+F.Intrinsic.Control.DoUntil(V.ODBC.conX!rst.EOF,=,True)
+	'get our user email and user name from their id.
+	V.Local.iUserID.Set(V.ODBC.conX!rst.fieldvalLong!User_ID)
+	'have to do a string replace cause the user number being returned is wonky WITH *!*
+	F.Global.Security.GetUserNameFromId(V.Local.iUserID,V.Local.sUserNameTemp)
+	F.Intrinsic.Control.If(V.Local.sUserNameTemp,=,"***NORETURN***")
+		F.Intrinsic.String.Concat("User Name for ID : ",V.Local.iUserID," Not found.",V.Local.sM)
+		F.Intrinsic.Debug.SetLA(V.Local.sM)
+	F.Intrinsic.Control.Else
+		'F.Intrinsic.String.Replace(V.Local.sUserName,"*!*","",V.Local.sUserName)
+		F.Intrinsic.String.Split(V.Local.sUserNameTemp,"*!*",V.Local.sUserNameTemp)
+		V.Local.sUserName.Set(V.Local.sUserNameTemp(0))
+		F.Intrinsic.Control.If(V.ODBC.conX!rst.FieldValTrim!IM_Flag,=,True)
+			F.Intrinsic.Control.If(V.Local.iMessId,<=,0)
+				'in reality we should only have to create this once right?
+				F.Global.Messaging.InternalMessageCreate(-1,v.Ambient.Now,000,v.Local.sSubject,v.Local.sBody,v.Local.iMessID)
+			F.Intrinsic.Control.EndIf
+			F.Global.Messaging.internalmessageQueueToUser(v.Local.iUserID,v.Local.iMessID)
+		F.Intrinsic.Control.EndIf
+		'get our contacts info later for our emails...
+		F.Intrinsic.Control.If(V.ODBC.conX!rst.FieldValTrim!Email_Flag,=,True)
+			F.Global.Security.GetUserEmail(V.Local.sUserName,V.Local.sUserEmail)
+			F.Intrinsic.Control.If(V.Local.sUserEmail.Trim,=,"")
+				F.Intrinsic.String.Concat("user Email for User ID : ",V.Local.iUserID," not found. ",V.Local.sM)
+				F.Intrinsic.Debug.SetLA(V.local.sM)
+			F.Intrinsic.Control.Else
+				'by here we should have user name and user email, format it into contacts name
+				F.Intrinsic.Control.If(V.Local.sContacts.Trim,=,"")
+					F.Intrinsic.String.Build("{0}*!*{1}",V.local.sUserName,V.Local.sUserEmail,V.Local.sContacts)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.String.Build("{0}@!@{1}*!*{2}",V.local.sContacts,V.Local.sUserName,V.local.sUserEmail,V.Local.sContacts)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conX!rst.MoveNext
+F.Intrinsic.Control.Loop
+
+'so our contacts string should be built with only those contacts that have a email flag of 1 so send that to them.
+F.Intrinsic.Control.If(V.Local.sContacts.Trim,<>,"")
+	F.Global.Security.getuserid(V.Caller.User,V.Caller.CompanyCode,V.Local.iUserID)
+	F.Global.Security.GetUserEmail(V.Caller.User,V.Local.sUserEmail)
+	F.Intrinsic.String.Build("{0}*!*{1}",V.local.suseremail,V.LOCAL.sUserName,V.local.sUserEmail)
+	F.Global.Messaging.QueueMessage(V.Caller.CompanyCode,V.Local.iUserID,"GCG_4335_Job_Alert.g2u",V.Local.sSubject,V.Local.sUserEmail,V.Local.sContacts,V.Local.sBody)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Send_Message_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4335_Job_Alert.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Send_Message.End
+
+Program.Sub.PostJob.Start
+F.Intrinsic.Control.SetErrorHandler("PostJob_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iRowCnt.Declare(Long)
+V.Local.i.Declare(Long)
+V.Local.sReadRow.Declare(String)
+V.Local.sJob.Declare(String)
+V.Local.sSuffix.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.dDate.Declare(Date)
+V.Local.iDay.Declare(Long)
+V.Local.sWriteRow.Declare(String)
+v.Local.sempname.Declare(String)
+v.Local.srev.Declare(String)
+v.Local.swc.Declare(string)
+v.Local.spart.Declare(String)
+v.Local.ssubject.Declare(string)
+V.Local.iUserID.Declare(Long)
+V.Local.sUserName.Declare(String)
+V.Local.sUserEmail.Declare(String)
+V.Local.sContacts.Declare(String)
+V.Local.sM.Declare(String)
+V.Local.iMessId.Declare(Long)
+V.Local.sBody.Declare(String)
+
+'set job, empname, wc variables
+V.Local.sJob.Set(V.Passed.009990)
+V.Local.sEmpName.Set(V.Passed.009994)
+V.Local.sWC.Set(V.Passed.000001)
+
+'Loads name of BDF and ID into memory
+F.Intrinsic.BDF.Load("AUX001","AUX001")
+'Copies structure of BDF and given the name "Clone"
+F.Intrinsic.BDF.Clone("AUX001","Clone")
+'Returns the number of rows of BDF and returns it to iRowCnt
+F.Intrinsic.BDF.ReadRowCount("AUX001",V.Local.iRowCnt)
+'Subtract 1 row to count rows starting from row 0 instead of counting from row 1 (ex: 0, 1, 2, 3 not (1,2,3))
+F.Intrinsic.Math.Sub(V.Local.iRowCnt,1,V.Local.iRowCnt)
+'Starting from 0 and looping through each row, 1 row at a time.
+F.Intrinsic.Control.For(V.Local.i,0,V.Local.iRowCnt,1)
+	'Reads data from AUX002
+	F.Intrinsic.BDF.ReadRow("AUX001",V.Local.i,V.Local.sReadRow)
+	'String delimiter(|~|) splits row from a string into array
+	F.Intrinsic.String.Split(V.Local.sReadRow,"|~|",V.Local.sReadRow)
+	'check to see if the if the job was selected
+	f.Intrinsic.Control.If(v.Local.sReadRow(0),=,"Y")
+		v.Local.spart.Set(v.Local.sReadRow(4))
+		F.Intrinsic.String.Build("Part {0} has been started!!",V.Local.sPart.Trim,V.Local.sSubject)
+		F.Intrinsic.String.Build("Employee {0}, has clocked into Workcenter, {3}, on Job #{1} with Part #: {2}",V.Local.sEmpName,V.Local.sJob.Trim,V.Local.sPart.Trim,V.Local.sWC.Trim,V.Local.sBody)
+		'query our table
+		F.Intrinsic.String.Build("Select User_ID, IM_Flag,Email_Flag From GCG_3931_Job_Alert Where Part = '{0}' And Machine = '{1}' And ( Email_Flag = '1' Or IM_Flag = '1')",V.Local.sPart.Trim,V.Local.sWC.Trim,V.Local.sSQL)
+		F.ODBC.Connection!conX.OpenLocalRecordsetRO("rst",V.Local.sSQL)
+		'get our contacts for our emails
+		F.Intrinsic.Control.DoUntil(V.ODBC.conX!rst.EOF,=,True)
+			'get our user email and user name from their id.
+			V.Local.iUserID.Set(V.ODBC.conX!rst.fieldvalLong!User_ID)
+			'have to do a string replace cause the user number being returned is wonky WITH *!*
+			F.Global.Security.GetUserNameFromId(V.Local.iUserID,V.Local.sUserName)
+			F.Intrinsic.Control.If(V.Local.sUserName,=,"***NORETURN***")
+				F.Intrinsic.String.Concat("User Name for ID : ",V.Local.iUserID," Not found.",V.Local.sM)
+				F.Intrinsic.Debug.SetLA(V.Local.sM)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Replace(V.Local.sUserName,"*!*","",V.Local.sUserName)
+				F.Intrinsic.Control.If(V.ODBC.conX!rst.FieldValTrim!IM_Flag,=,True)
+					F.Intrinsic.Control.If(V.Local.iMessId,<=,0)
+						'in reality we should only have to create this once right?
+						F.Global.Messaging.InternalMessageCreate(-1,v.Ambient.Now,000,v.Local.sSubject,v.Local.sBody,v.Local.iMessID)
+					F.Intrinsic.Control.EndIf
+					F.Global.Messaging.internalmessageQueueToUser(v.Local.iUserID,v.Local.iMessID)
+				F.Intrinsic.Control.EndIf
+				'get our contacts info later for our emails...
+				F.Intrinsic.Control.If(V.ODBC.conX!rst.FieldValTrim!Email_Flag,=,True)
+					F.Global.Security.GetUserEmail(V.Local.sUserName,V.Local.sUserEmail)
+					F.Intrinsic.Control.If(V.Local.sUserEmail.Trim,=,"")
+						F.Intrinsic.String.Concat("user Email for User ID : ",V.Local.iUserID," not found. ",V.Local.sM)
+						F.Intrinsic.Debug.SetLA(V.local.sM)
+					F.Intrinsic.Control.Else
+						'by here we should have user name and user email, format it into contacts name
+						F.Intrinsic.Control.If(V.Local.sContacts.Trim,=,"")
+							F.Intrinsic.String.Build("{0}*!*{1}",V.local.sUserName,V.Local.sUserEmail,V.Local.sContacts)
+						F.Intrinsic.Control.Else
+							F.Intrinsic.String.Build("{0}@!@{1}*!*{2}",V.local.sContacts,V.Local.sUserName,V.local.sUserEmail,V.Local.sContacts)
+						F.Intrinsic.Control.EndIf
+					F.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+			F.ODBC.conX!rst.MoveNext
+		F.Intrinsic.Control.Loop
+		'so our contacts string should be built with only those contacts that have a email flag of 1 so send that to them.
+		F.Intrinsic.Control.If(V.Local.sContacts.Trim,<>,"")
+			F.Global.Security.getuserid(V.Caller.User,V.Caller.CompanyCode,V.Local.iUserID)
+			F.Global.Security.GetUserEmail(V.Caller.User,V.Local.sUserEmail)
+			F.Intrinsic.String.Build("{0}*!*{1}",V.local.suseremail,V.LOCAL.sUserName,V.local.sUserEmail)
+			F.Global.Messaging.QueueMessage(V.Caller.CompanyCode,V.Local.iUserID,"GCG_4335_Job_Alert.g2u",V.Local.sSubject,V.Local.sUserEmail,V.Local.sContacts,V.Local.sBody)
+		F.Intrinsic.Control.EndIf
+	f.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.i)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("PostJob_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4335_Job_Alert.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.PostJob.End
+
+Program.Sub.LoadScreen.Start
+F.Intrinsic.Control.SetErrorHandler("LoadScreen_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.SS_Form1.GsGridControl1.AddGridviewFromDatatable("JOBALERT", "JOBALERT")
+gui.SS_Form1.GsGridControl1.SetGridviewProperty("JOBALERT", "Readonly", False)
+Gui.SS_Form1.GsGridControl1.SetColumnProperty("JOBALERT", "PART", "Caption", "Part")
+gui.SS_Form1.GsGridControl1.SetColumnProperty("JOBALERT", "PART", "readonly", True)
+gui.SS_Form1.GsGridControl1.SetColumnProperty("JOBALERT", "PART", "AllowEdit", False)
+Gui.SS_Form1.GsGridControl1.SetColumnProperty("JOBALERT", "Machine", "Caption", "Machine")
+gui.SS_Form1.GsGridControl1.SetColumnProperty("JOBALERT", "Machine", "readonly", True)
+gui.SS_Form1.GsGridControl1.SetColumnProperty("JOBALERT", "Machine", "AllowEdit", False)
+Gui.SS_Form1.GsGridControl1.SetColumnProperty("JOBALERT", "User_ID", "Caption", "User ID")
+gui.SS_Form1.GsGridControl1.SetColumnProperty("JOBALERT", "User_ID", "readonly", True)
+gui.SS_Form1.GsGridControl1.SetColumnProperty("JOBALERT", "User_ID", "AllowEdit", False)
+Gui.SS_Form1.GsGridControl1.SetColumnProperty("JOBALERT", "Email_Flag", "Caption", "Email")
+Gui.SS_Form1.GsGridControl1.SetColumnProperty("JOBALERT", "IM_FLAG", "Caption", "IM")
+Gui.SS_Form1.GsGridControl1.SetColumnProperty("JOBALERT", "Delete", "Caption", "Delete")
+gui.SS_Form1.GsGridControl1.SetColumnProperty("JOBALERT", "Delete", "readonly", False)
+gui.SS_Form1.GsGridControl1.SetColumnProperty("JOBALERT", "Delete", "AllowEdit", True)
+
+Gui.SS_Form1.GsGridControl1.MainView("JOBALERT")
+
+''close datatables and views
+'f.Data.DataTable.Close("JOBALERT")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadScreen_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4335_Job_Alert.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	f.Intrinsic.Control.CallSub(ss_form1_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.LoadScreen.End
+
+Program.Sub.GsGridControl1_CellValueChanged.Start
+v.Global.bChanged.Set(True)
+Program.Sub.GsGridControl1_CellValueChanged.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_Job_Alert_Maint$}$TRT$}$3/23/2014$}$False
+${$1$}$$}$$}$0$}$15935$}$OLS005-PB-START-JOB-POST-HOOK(GUI START JOB BUTTON)$}$5/6/2016 1:59:48 PM$}$(Program: OLG002; Screen: OLS005)
+
+${$3$}$0$}$$}$-1$}$-1$}$$}$1/1/1900$}$Maintenance Program that is described in quote 5491.
+
+Program.Sub.Comments.End
+
+Program.Sub.ScreenSS.Start
+SS_Form1{{CAPTION::User Alert Maintenance
+SS_Form1.CTRL{{NAME::txtPart\\TYPE::2\\CAPTION::Part\\TABSTOP::1\\GROUP::1\\BROWSER::0\\SIZE::1.25
+SS_Form1.CTRL{{NAME::txtRev\\TYPE::2\\CAPTION::Rev\\TABSTOP::2\\GROUP::1\\BROWSER::0\\SIZE::0.5
+SS_Form1.CTRL{{NAME::txtLoc\\TYPE::2\\CAPTION::Loc\\GROUP::1\\BROWSER::1\\SIZE::0.5
+SS_Form1.CTRL{{NAME::txtWC\\TYPE::2\\CAPTION::WC\\GROUP::1\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::txtUser\\TYPE::2\\CAPTION::User ID\\GROUP::2\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdAdd\\TYPE::5\\CAPTION::Add\\GROUP::3\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdRemove\\TYPE::5\\CAPTION::Remove\\GROUP::3\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdSave\\TYPE::5\\CAPTION::Save\\GROUP::4\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdDelete\\TYPE::5\\CAPTION::Delete\\GROUP::4\\BROWSER::0\\SIZE::1
+
+Program.Sub.ScreenSS.End
+
